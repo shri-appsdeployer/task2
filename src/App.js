@@ -26,7 +26,7 @@ function App() {
   
   return (
     <div className="App">
-      <h1 className="emp-heading">Task 2</h1>
+      <h1 className="emp-heading">Task 2-Employee Details</h1>
       <EmployeTable data={data}  />
       <EmployeForm data={data} setData={setData}/>
     </div>
