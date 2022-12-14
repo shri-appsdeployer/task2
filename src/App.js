@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import EmployeForm from "./components/EmployeForm";
+import EmployeTable from "./components/EmployeTable";
+import "./App.css";
+import { useState } from "react";
+
+const sampleData = [
+  {
+    Fname: "shrinivas",
+    Lname: "Joshi",
+    handle: "@shrinivas",
+  },
+  {
+    Fname: "Dhruv",
+    Lname: "Joshi",
+    handle: "@Dhruv",
+  },
+  {
+    Fname: "Dhananjay",
+    Lname: "Patidar",
+    handle: "@Dpatidar",
+  },
+];
 
 function App() {
+  const [data, setData] = useState(sampleData)
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="emp-heading">Task 2</h1>
+      <EmployeTable data={data}  />
+      <EmployeForm data={data} setData={setData}/>
     </div>
   );
 }
